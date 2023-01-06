@@ -12,5 +12,3 @@ archinstall
 
 #### i do the pacman -Syy to make sure my pacman is synced
 #### i then install archinstall to make sure its all up to date and working
-
-[Wiki](https://github.com/swayz8148/arch-install/wiki)
