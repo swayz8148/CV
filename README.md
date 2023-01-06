@@ -152,7 +152,7 @@ pacman -S os-prober
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg -home /boot/grub/grub.cfg
 
-systemctl enable dgcpcd.service
+systemctl enable dhcpcd.service
 systemctl enable NetworkManager.service
 exit the chroot with the command exit
 ```
@@ -172,7 +172,7 @@ sudo pacman -S xorg xorg-xinit xterm plasma plasma-desktop plasma-wayland-sessio
 kde-applications kdeplasma-addons gdm
 sudo nano ~/.xinitrc
 add exec startkde
-sudo systemctl enable sddm.service
+sudo systemctl enable gdm.service
 
 reboot and login
 ```
