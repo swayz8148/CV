@@ -1,3 +1,4 @@
+
 # _Install arch linux with windows 10 (dual boot)_
 
 #### first steps
@@ -13,7 +14,7 @@ ls /sys/firmware/efi/efivars/
 If you see a lot of text your in good
 
 time and date
-timedatectl set-timezone Europe/london
+timedatectl set-timezone Europe/London
 
 Set keyboard layout
 loadkeys uk
@@ -23,9 +24,9 @@ loadkeys uk
 
 ```
 cfdisk /dev/sda
-make one partiton with 30G | ROOT
-make one partiton with 57G | HOME
-make one partiton with the rest of the space | SWAP
+make one partiton with at least 20G | ROOT
+make one partiton with the rest of the drive - 4 for the swap | HOME
+make one partiton with at least 4GB | SWAP
 then write the changes and exit
 ```
 
@@ -49,9 +50,6 @@ swapon /dev/sda7
 mount /dev/sda5 /mnt
 mkdir /mnt/home
 mount /dev/sda6 /mnt/home
-
-check if thet mounted properly
-lsblk
 ```
 
 #### Seting the fasets mirrors
@@ -65,7 +63,6 @@ rankmirrors -n 10 /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist
 ```
 
 #### Setting up pacstrap
-
 ```
 pacstrap -i /mnt base base-devel linux linux-lts linux-headers linux-firmware intel-ucode
 sudo nano vim git neofetch networkmanager dhcpcd pulseaudio
@@ -84,20 +81,17 @@ none
 ```
 
 #### Chroot into the new install
-
 ```
 arch-chroot /mnt
 ```
 
 #### Change the root password
-
 ```
 passwd
 and set the password you want
 ```
 
 #### Add a new user
-
 ```
 useradd -m Your Username
 passwd Your Username
@@ -132,15 +126,14 @@ cat /etc/hostname
 nano /etc/hosts
 add
 127.0.0.1		localhost
-::1		localhost
+::1				localhost
 127.0.1.1		hostname.localdomain	localhost
-cat /etc/hosts
 ```
 
 #### Setting the timezone
 
 ```
-ln -sf /usr/share/zoneinfo/Europe/london /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 
 Remember Europe/London is my timezone you have to put your timezone in
 ```
@@ -176,7 +169,7 @@ unplug the usb
 
 ```
 sudo pacman -S xorg xorg-xinit xterm plasma plasma-desktop plasma-wayland-session
-kde-applications kdeplasma-addons sddm
+kde-applications kdeplasma-addons gdm
 sudo nano ~/.xinitrc
 add exec startkde
 sudo systemctl enable sddm.service
