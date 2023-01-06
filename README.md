@@ -7,8 +7,8 @@
 ```
 pacman -Syy
 pacman -S archinstall
-
-^ i do this to check if the archinstall sript is upto date ^
-
 archinstall
 ```
+
+#### i do the pacman -Syy to make sure my pacman is synced
+#### i then install archinstall to make sure its all up to date and working
