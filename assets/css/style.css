@@ -1,0 +1,102 @@
+/* reset css */
+@import 'reset.css';
+/* utill css */
+@import 'utill.css';
+
+body {
+    background: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 40px;
+    font-size: 20px;
+    background: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px #9ac00f solid;
+    box-shadow: 1px 1px 30px #b7e610;
+}
+
+.nav__logo{
+    font-size: 30px;
+}
+
+.nav__links a{
+    padding: 0 15px;
+    color: var(--light);
+    text-decoration: none;
+}
+
+.nav__links a:hover{
+    color: #e9e4e4;
+}
+
+.title{
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 45px;
+}
+
+.title p{
+    font-size: 30px;
+}
+
+.title .small p{
+    font-size: 20px;
+}
+
+.title-windows{
+    text-align: center;
+    margin-top: 15vh;
+    font-size: 15px;
+}
+
+.title-linux{
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 18px;
+}
+
+.arch-stuff{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.code-block{
+    line-height: 50px;
+}
+
+code{
+    color: #b7e610;
+}
+
+.subheading{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.apps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+.apps a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.apps a:hover{
+    color: #f2f2f2f2
+}
