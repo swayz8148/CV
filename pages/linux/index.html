@@ -276,12 +276,9 @@
   <div class="arch-stuff">
     <div class="code-block">
       <code>
-        sudo pacman -S git<br>
-        alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'<br>
-        mkdir ~/.dotfiles<br>
-        config clone --bare https://github.com/AlexvZyl/.dotfiles ~/.dotfiles/<br>
-        config checkout -f<br>
-        sudo chmod +x ~/.scripts/install.sh && ~/.scripts/install.sh<br>
+        sudo pacman -S i3 xorg xorg-xinit sddm<br>
+        echo "exec i3" >> ~/.xinitrc<br>
+        reboot or startx
         </code>
     </div>
   </div>
