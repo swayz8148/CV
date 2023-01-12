@@ -276,12 +276,12 @@
   <div class="arch-stuff">
     <div class="code-block">
       <code>
-        sudo pacman -S xorg xorg-xinit xterm plasma plasma-desktop plasma-wayland-session<br>
-        kde-applications kdeplasma-addons sddm<br>
-        sudo nano ~/.xinitrc<br>
-        add exec startkde<br>
-        sudo systemctl enable sddm.service<br>
-        reboot and login<br>
+        sudo pacman -S git<br>
+        alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'<br>
+        mkdir ~/.dotfiles<br>
+        config clone --bare https://github.com/AlexvZyl/.dotfiles ~/.dotfiles/<br>
+        config checkout -f<br>
+        sudo chmod +x ~/.scripts/install.sh && ~/.scripts/install.sh<br>
         </code>
     </div>
   </div>
