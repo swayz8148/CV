@@ -276,39 +276,13 @@
   <div class="arch-stuff">
     <div class="code-block">
       <code>
-        sudo pacman -S i3 xorg xorg-xinit polybar rofi sddm<br>
-        echo "exec i3" >> ~/.xinitrc<br>
-        reboot or startx<br>
-
-        theme i3<br>
-        git clone https://github.com/unix121/i3wm-themes<br>
-        cd i3wm-themes/scripts/<br>
-        ./apply_theme.sh ThemeName<br>
-
-        Fire<br>
-        <img src="https://camo.githubusercontent.com/ebe6788cc58707b44067dfe7946494961e18805487a7257fe51edff3d04c367b/687474703a2f2f692e696d6775722e636f6d2f385535446d46592e706e67"><br>
-        Grayscale<br>
-        <img src="https://camo.githubusercontent.com/30396bbe95d58fd7b7c11361ebb2446a53a57082eeb43d2223412f2341f15597/687474703a2f2f692e696d6775722e636f6d2f4b3075543575612e706e67"><br>
-        Ice<br>
-        <img src="https://camo.githubusercontent.com/d4f2109133716f62a4dcf555f6aaa87e1df6a170e211fcbbbfae9c825f452d3f/687474703a2f2f692e696d6775722e636f6d2f3361314a37376a2e706e67"><br>
-        Minimal<br>
-        <img src="https://camo.githubusercontent.com/c757d3af3a48d4fd7646db1637676e443110eaa696859fceeafbc7a23515fd5b/687474703a2f2f692e696d6775722e636f6d2f61616f73695a322e706e67"><br>
-        Nature<br>
-        <img src="https://camo.githubusercontent.com/ce3d77f3b3572a847a87d094650f200d3e1aad5968b9694868f8ae79564e8214/687474703a2f2f692e696d6775722e636f6d2f314237494139362e706e67"><br>
-        Sea<br>
-        <img src="https://camo.githubusercontent.com/bff831fccf3fb5d21d4fb92cf4b6cc2112855b9709191672f8ae4d09e43aa78a/687474703a2f2f692e696d6775722e636f6d2f796170464343652e706e67"><br>
-        Space<br>
-        <img src="https://camo.githubusercontent.com/43f2d357f19baecde162bcc5b4aed06a790a3fd6e3cb334956e3257e1611f205/68747470733a2f2f692e696d6775722e636f6d2f654c6b797663302e706e67"><br>
-        Subway<br>
-        <img src="https://camo.githubusercontent.com/77ae7160f1b5913dad01f64473aee041a26c6c9e7df5bf9265ee8a590cbc710e/687474703a2f2f692e696d6775722e636f6d2f4d355a483944682e706e67"><br>
-        Colors<br>
-        <img src="https://camo.githubusercontent.com/9025c76592c874119e40d6ff2294e003d07699770675a3c11be9bed0cc38afc5/687474703a2f2f692e696d6775722e636f6d2f5a55457a6b69542e706e67"><br>
-        Water<br>
-        <img src="https://camo.githubusercontent.com/90fed2ad97303e1163a383db17f78d47423241787df0fc596e9ca38ad16b7e79/687474703a2f2f692e696d6775722e636f6d2f7a33726c69757a2e706e67"><br>
-
+        sudo pacman -S xorg xorg-xinit plasma plasma-desktop plasma-wayland-session kde-applications kdeplasma-addons sddm<br>
+        echo "exec startkde" >> ~/.xinitrc<br>
+        sudo systemctl enable sddm.service<br>
+        reboot<br>
         </code>
     </div>
-    
+
   </div>
 </body>
 </html>
