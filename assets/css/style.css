@@ -108,11 +108,12 @@ code{
     color: #f2f2f2f2
 }
 
-.Links, a{
-    color: ver(--light);
-    text-decoration: none;
-}
-
 .test {
     background: var(--light);
+}
+
+.test, a{
+    color: ver(--light);
+    text-decoration: none;
+    width: 100px;
 }
