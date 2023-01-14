@@ -105,4 +105,7 @@ code{
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: ver(--light);
+    text-decoration: none;
+    padding: 0 10px;
 }
