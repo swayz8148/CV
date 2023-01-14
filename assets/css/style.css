@@ -108,3 +108,21 @@ code{
     flex-direction: column;
     padding-top: 20px;
 }
+
+.list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.list, a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.list a:hover{
+    color: #cccbcb;
+}
