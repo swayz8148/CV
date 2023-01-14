@@ -113,3 +113,7 @@ code{
     text-decoration: none;
     padding: 0 10px;
 }
+
+.test {
+    background: var(--light);
+}
