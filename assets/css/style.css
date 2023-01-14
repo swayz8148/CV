@@ -70,6 +70,12 @@ nav {
     padding-top: 20px;
 }
 
+.windows-stuff {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
 .code-block{
     line-height: 50px;
 }
