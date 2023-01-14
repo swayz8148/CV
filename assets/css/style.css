@@ -108,13 +108,9 @@ code{
     color: #f2f2f2f2
 }
 
-.Links{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.Links, a{
     color: ver(--light);
     text-decoration: none;
-    padding: 0 10px;
 }
 
 .test {
