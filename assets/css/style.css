@@ -3,6 +3,23 @@
 /* utill css */
 @import 'utill.css';
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #749207c9;
+    border-radius: .7rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #52631583;
+}
+
 body {
     background: var(--dark);
     color: var(--light);
@@ -13,54 +30,54 @@ nav {
     box-shadow: 1px 1px 30px var(--ascent);
 }
 
-.title{
+.title {
     margin-top: 20vh;
     text-align: center;
     font-size: 45px;
 }
 
-.title p{
+.title p {
     font-size: 30px;
 }
 
-.title .small p{
+.title .small p {
     font-size: 20px;
 }
 
-.title-windows{
+.title-windows {
     text-align: center;
     margin-top: 15vh;
     font-size: 15px;
 }
 
-.title-linux{
+.title-linux {
     text-align: center;
     margin-top: 20vh;
     font-size: 18px;
 }
 
-.arch-stuff{
+.arch-stuff {
     display: flex;
     text-align: center;
     flex-direction: column;
     padding-top: 20px;
 }
 
-.code-block{
+.code-block {
     line-height: 50px;
 }
 
-code{
+code {
     color: var(--ascent);
 }
 
-.subheading{
+.subheading {
     text-align: center;
     font-size: 15px;
     margin-top: 50px;
 }
 
-.apps{
+.apps {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +91,7 @@ code{
     text-decoration: none;
 }
 
-.apps a:hover{
+.apps a:hover {
     color: #f2f2f2f2
 }
 
@@ -94,11 +111,12 @@ code{
     line-height: 50px;
 }
 
-.list, a {
+.list,
+a {
     text-decoration: none;
     color: var(--light);
 }
 
-.list a:hover{
+.list a:hover {
     color: #cccbcb;
 }
