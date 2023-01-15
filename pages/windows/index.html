@@ -13,6 +13,28 @@
   />
     <title>Windows | Swayz</title>
   </head>
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #222;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #20d1d1;
+      border-radius: .7rem;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #18c0c0dc;
+    }
+
+    nav {
+      box-shadow: 1px 1px 30px #20d1d1;
+  }
+  </style>
   <body class="bg-dark text-light">
     <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark text-light">
       <span class="navbar-brand mb-0 h1">Swayz</span>
@@ -85,7 +107,7 @@
 
     <div class="windows-stuff">
       <div class="code-block">
-        <code style="color:aqua;">
+        <code style="color: #20d1d1;">
           Open powershell as admin<br>
           iwr -useb https://christitus.com/win | iex
         </code>
@@ -98,7 +120,7 @@
   
       <div class="windows-stuff">
         <div class="code-block">
-          <code style="color:aqua;">
+          <code style="color:#20d1d1;">
             Open cmd as admin.<br>
             bcdedit /enum frimware<br>
             bcdedit /delete {identifer} - identifer = the long line of numbers/letters.

@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-    box-shadow: 1px 1px 30px #b7e610;
+    box-shadow: 1px 1px 30px var(--ascent);
 }
 
 .title{
@@ -48,11 +48,10 @@ nav {
 
 .code-block{
     line-height: 50px;
-    color: #b7e610;
 }
 
 code{
-    color: #b7e610;
+    color: var(--ascent);
 }
 
 .subheading{
