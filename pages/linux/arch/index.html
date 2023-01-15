@@ -275,6 +275,7 @@
 
   <div class="arch-stuff">
     <div class="code-block">
+      <h2>Plasma</h2>
       <code>
         sudo pacman -S xorg xorg-xinit plasma plasma-desktop plasma-wayland-session kde-applications kdeplasma-addons sddm<br>
         echo "exec startkde" >> ~/.xinitrc<br>
@@ -283,6 +284,81 @@
         </code>
     </div>
 
-  </div>
+    <div class="arch-stuff">
+      <div class="code-block">
+        <h2>sway</h2>
+        <code>
+          sudo pacman -S --needed sway wofi waybar reflector mtools vim neovim zsh vifm \ <br>
+          papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \<br>
+          translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \<br>
+          kanshi gnome-keyring alacritty kitty pavucontrol playerctl imv mpv<br>
+          sudo usermod -a -G video $USER<br>
+          <br>
+          git clone https://github.com/owpk/dotfiles-sway<br>
+          cd dotfiles-sway<br>
+          chsh -s /bin/zsh $USER<br>
+          <br>
+          sudo mkdir /usr/share/fonts/TTF 2> /dev/null<br>
+          sudo cp ./fonts/* /usr/share/fonts/TTF/<br>
+          fc-cache<br>
+          mv ~/.zshrc ~/.zshrc.bak 2> /dev/null<br>
+          ln -s `pwd`/.zshrc ~/.zshrc<br>
+          mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null<br>
+          ln -s `pwd`/.p10k.zsh ~/.p10k.zsh<br>
+          mv ~/.config ~/.config.bak 2> /dev/null<br>
+          ln -s `pwd`/.config ~/.config<br>
+          mv ~/.vim ~/.vim.bak 2> /dev/null<br>
+          ln -s `pwd`/.vim ~/.vim<br>
+          <br>
+          git clone https://aur.archlinux.org/aurutils.git<br>
+          cd aurutils<br>
+          makepkg -si<br>
+
+          CUSTOM=/etc/pacman.d/custom<br>
+          sudo touch $CUSTOM<br>
+
+          sudo cat >> $CUSTOM << EOF<br>
+          '[options]'<br>
+          'CacheDir = /var/cache/pacman/pkg'<br>
+          'CacheDir = /var/cache/pacman/custom'<br>
+          'CleanMethod = KeepCurrent'<br>
+
+          '[custom]'<br>
+          'SigLevel = Optional TrustAll'<br>
+          'Server = file:///var/cache/pacman/custom'<br>
+          EOF<br>
+
+          sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf<br>
+          install -d /var/cache/pacman/custom -o $USER<br>
+          repo-add /var/cache/pacman/custom/custom.db.tar<br>
+          sudo pacman -Syu<br>
+
+          aur sync wob-git<br>
+          sudo pacman -S wob-git<br>
+          aur sync nwg-launchers<br>
+          sudo pacman -S nwg-launchers<br>
+          aur sync wlsunset<br>
+          sudo pacman -S wlsunset<br>
+          aur sync azote<br>
+          sudo pacman -S azote<br>
+          aur sync networkmanager-dmenu-git<br>
+          sudo pacman -S networkmanager-dmenu-git<br>
+
+          sway<br>
+          reboot<br>
+          </code>
+
+
+          <div class="arch-stuff">
+            <div class="code-block">
+              <h2>Credits:</h2>
+              <code>
+                <a href="https://github.com/owpk/dotfiles-sway">Sway Dotfile - Github</a>
+                </code>
+            </div>
+
+      </div>
+    </div>
 </body>
+
 </html>
