@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>Home | Swayz</title>
   </head>
-  <body>
-    <nav>
-      <div class="nav_logo">
-        <h>Swayz</h>
+  <body class="bg-dark text-light">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark text-light">
+      <span class="navbar-brand mb-0 h1">Swayz</span>
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a href="index.html" class="nav-link active">
+                      Home
+                  </a>
+              </li>
+  
+              <li class="nav-item active">
+                  <a href="pages/linux/index.html" class="nav-link">
+                      Linux Stuff
+                  </a>
+              </li>
+  
+              <li class="nav-item active">
+                  <a href="pages/windows/index.html" class="nav-link">
+                      Windows Stuff
+                  </a>
+              </li>
+          </ul>
       </div>
-      <div class="nav__links">
-        <a href="index.html">Home</a>
-        <a href="pages/linux">Linux Stuff</a>
-        <a href="pages/windows">Windows Stuff</a>
-      </div>
-    </nav>
+  </nav>
 
     <div class="title">
       <h1>Welcome bitch</h1>
@@ -26,5 +49,10 @@
         <p>Use the navbar for the os you reset</p>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
