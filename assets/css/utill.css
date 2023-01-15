@@ -1,5 +1,22 @@
 :root {
   --light: #fff7f7;
   --dark: #222;
-  --ascent: #aa3838;
+  --ascent: #b7e610;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #749207c9;
+  border-radius: .7rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52631583;
 }
