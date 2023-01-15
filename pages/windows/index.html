@@ -80,25 +80,25 @@
 
     <div class="windows-stuff">
       <div class="code-block">
-        <code>
+        <code style="color:aqua;">
           Open powershell as admin<br>
           iwr -useb https://christitus.com/win | iex
         </code>
-
-        <div class="subheading">
-          <h1>Removing Old Grub Installs</h1>
-          <p style="color: red;">Warning make sure you know what you are doing before doing this :)</p>
-        </div>
-    
-        <div class="windows-stuff">
-          <div class="code-block">
-            <code>
-              Open cmd as admin.<br>
-              bcdedit /enum frimware<br>
-              bcdedit /delete {identifer} - identifer = the long line of numbers/letters.
-              <p style="color: red;">Make sure its the grub one before deleting it do not delete the windows one.</p>
-            </code>
       </div>
+
+      <div class="subheading">
+        <h1>Removing Old Grub Installs</h1>
+        <p style="color: red;">Warning make sure you know what you are doing before doing this :)</p>
+      </div>
+  
+      <div class="windows-stuff">
+        <div class="code-block">
+          <code style="color:aqua;">
+            Open cmd as admin.<br>
+            bcdedit /enum frimware<br>
+            bcdedit /delete {identifer} - identifer = the long line of numbers/letters.
+            <p style="color: red;">Make sure its the grub one before deleting it do not delete the windows one.</p>
+          </code>
     </div>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
