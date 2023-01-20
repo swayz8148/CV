@@ -296,23 +296,24 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- App Launcher
-    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show run") end,
+    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show drun") end,
               {description = "run rofi", group = "launcher"}),
     -- Powermenu
     awful.key({ modkey },            "p",     function () awful.spawn("rofi -show power-menu -modi power-menu:/home/swayz/.local/bin/rofi-power-menu") end,
               {description = "run rofi powermenu", group = "launcher"}),
-    -- Firefox
+    -- firefox
     awful.key({ modkey },            "b",     function () awful.spawn("firefox") end,
               {description = "run firefox", group = "applications"}),
+    -- screenshot
+    awful.key({ }, "Print", function () awful.spawn("scrot -s /home/swayz/screenshots/") end,
+              {description = "screenshot", group = "applications"}),
     -- Discord
     awful.key({ modkey },            "d",     function () awful.spawn("discord") end,
               {description = "run discord", group = "applications"}),
     -- VSCode
     awful.key({ modkey },            "v",     function () awful.spawn("code") end,
               {description = "run code", group = "applications"}),
-    -- shutter
-    awful.key({ modkey },            "]",     function () awful.spawn("shutter") end,
-              {description = "run shutter", group = "applications"}),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
@@ -559,6 +560,7 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-beautiful.useless_gap = 20,
+beautiful.useless_gap = 10,
 awful.spawn.with_shell("polybar")
-awful.util.spawn('dwall -s colony')
+awful.spawn.with_shell("spotify")
+awful.util.spawn('dwall -s island')
