@@ -298,7 +298,7 @@
     <div class="code-block">
       <h2>awesome</h2>
       <code>
-        sudo pacman -S awesome rofi polybar alacritty python-pywal calc nemo gedit xorg-xrandr feh cronie<br>
+        sudo pacman -S awesome rofi polybar alacritty python-pywal calc nemo code gedit xorg-xrandr feh cronie ttf-fantasque-sans-mono ttf-iosevka-nerd<br>
         </code>
     </div>
   </div>
@@ -311,27 +311,46 @@
         cp /etc/xdg/awesome/rc.lua ~/.config/awesome/ <br>
         edit awesome's config file - sudo gedit ~/.config/awesome/rc.lua <br>
         copy everything in <a href="rc.lua">rc.lua</a> into rc.lua <br>
+
         <br>
+
         mkdir Desktop/stuff <br>
         cd Desktop/stuff <br>
         git clone --depth=1 https://github.com/adi1090x/rofi.git <br>
         cd rofi <br>
         chmod +x setup.sh <br>
         ./setup.sh <br>
+
         <br>
+
         cd Desktop/stuff <br>
         git clone https://github.com/adi1090x/dynamic-wallpaper.git<br>
         cd dynamic-wallpaper<br>
         chmod +x install.sh<br>
         ./install.sh<br>
+
         <br>
+
         bash -c "bash <(curl -sL https://git.io/Jv0e4) --yes"<br>
         edit <a href="config.ini">config.ini</a><br>
-
         cp rofi-power-menu ~/.local/bin/<br>
         modkey+ctrl+r to reload awesome <br>
+      
+        <br>
         
+        cd Desktop/stuff <br>
+        git clone https://aur.archlinux.org/alacritty-themes.git <br>
+        cd alacritty-themes <br>
+        makepkg -si <br>
+        alacritty-themes --create <br>
+        alacritty-themes <br>
 
+        <br>
+        
+        cd Desktop/stuff <br>
+        git clone <br>
+        
+        <br>
 
         If something isnt working try doing the install again.<br>
         I have tested this 3 times on 3 differant fresh installs of awesome.
