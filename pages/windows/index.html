@@ -122,9 +122,18 @@
         <div class="code-block">
           <code style="color:#20d1d1;">
             Open cmd as admin.<br>
-            bcdedit /enum frimware<br>
+            bcdedit /enum firmware<br>
             bcdedit /delete {identifer} - identifer = the long line of numbers/letters.
             <p style="color: red;">Make sure its the grub one before deleting it do not delete the windows one.</p>
+
+            diskpart<br>
+            sel disk 0<br>
+            sel vol 1<br>
+            assign letter=z:<br>
+            exit<br>
+            z:<br>
+            cd efi<br>
+            rmdir grub_uefi<br>
           </code>
     </div>
     <script
