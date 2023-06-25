@@ -1,122 +1,167 @@
-/* reset css */
-@import 'reset.css';
-/* utill css */
-@import 'utill.css';
+/* CSS Reset */
 
-::-webkit-scrollbar {
-    width: 6px;
+/* Box sizing border-box for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
-    background: var(--dark);
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #749207c9;
-    border-radius: .7rem;
+/* Remove list styles (bullet points) */
+ol,
+ul {
+    list-style: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #52631583;
-}
-
-body {
-    background: var(--dark);
-    color: var(--light);
-    overflow-x: hidden;
-}
-
-nav {
-    box-shadow: 1px 1px 30px var(--ascent);
-}
-
-.title {
-    margin-top: 20vh;
-    text-align: center;
-    font-size: 45px;
-}
-
-.title p {
-    font-size: 30px;
-}
-
-.title .small p {
-    font-size: 20px;
-}
-
-.title-windows {
-    text-align: center;
-    margin-top: 15vh;
-    font-size: 15px;
-}
-
-.title-linux {
-    text-align: center;
-    margin-top: 20vh;
-    font-size: 18px;
-}
-
-.arch-stuff {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding-top: 20px;
-}
-
-.code-block {
-    line-height: 50px;
-}
-
-code {
-    color: var(--ascent);
-}
-
-.subheading {
-    text-align: center;
-    font-size: 15px;
-    margin-top: 50px;
-}
-
-.apps {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 50px;
-    margin-top: 50px;
-}
-
-.apps a {
-    color: var(--light);
-    text-decoration: none;
-}
-
-.apps a:hover {
-    color: #f2f2f2f2
-}
-
-.windows-stuff {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding-top: 20px;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20vh;
-    font-size: 25px;
-    line-height: 50px;
-}
-
-.list,
+/* Remove default hyperlink styles */
 a {
     text-decoration: none;
-    color: var(--light);
+    color: inherit;
 }
 
-.list a:hover {
-    color: #cccbcb;
+/* Remove default outline styles */
+button,
+input,
+textarea {
+    outline: none;
+}
+
+/* Remove default border styles */
+img,
+iframe,
+input,
+textarea,
+button {
+    border: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@300;200&display=swap');
+
+body {
+    font-family: 'ASAP', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #444;
+    background: linear-gradient(to bottom, #444, #333);
+    /* For older browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#333', GradientType=0);
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-shadow: 5px 5px 20px black;
+}
+
+.Header {
+    margin: 17rem;
+    height: 100%;
+}
+
+.Title {
+    display: flex;
+    font-size: 3.5rem;
+}
+
+.Title small {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 25px 20px;
+    color: #888;
+}
+
+.Profile-img {
+    position: relative;
+    top: -30rem;
+    left: 50rem;
+}
+
+.Profile-img img {
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    height: 25rem;
+    animation: slow-border 10s infinite linear;
+}
+
+@keyframes slow-border {
+    0% {
+        border: 3px solid red;
+    }
+
+    14.28% {
+        border: 3px solid orange;
+    }
+
+    28.57% {
+        border: 3px solid yellow;
+    }
+
+    42.85% {
+        border: 3px solid green;
+    }
+
+    57.14% {
+        border: 3px solid blue;
+    }
+
+    71.42% {
+        border: 3px solid indigo;
+    }
+
+    85.71% {
+        border: 3px solid violet;
+    }
+
+    100% {
+        border: 3px solid red;
+    }
+}
+
+.Socials {
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+.container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.Subheading {
+    font-size: 1.5rem;
+}
+
+ol {
+    list-style: circle;
+    margin: 0 2rem;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.Language-icons i{
+    font-size: 2.5rem;
+}
+
+.OS {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }

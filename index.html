@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>Home | Swayz</title>
-  </head>
-  <body class="bg-dark text-light">
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark text-light">
-      <span class="navbar-brand mb-0 h1">Swayz</span>
-      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item active">
-                  <a href="index.html" class="nav-link active">
-                      Home
-                  </a>
-              </li>
-  
-              <li class="nav-item active">
-                  <a href="pages/linux/index.html" class="nav-link">
-                      Linux Stuff
-                  </a>
-              </li>
-  
-              <li class="nav-item active">
-                  <a href="pages/windows/index.html" class="nav-link">
-                      Windows Stuff
-                  </a>
-              </li>
-          </ul>
-      </div>
-  </nav>
 
-    <div class="title">
-      <h1>Welcome</h1>
-      <p>This site is made for when i reset my pc</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Michael Downard | Personal </title>
+</head>
+
+<body>
+    <div class="Header">
+        <div class="Title">
+            <p>Hello, I'm Michael</p><small>AKA Swayz</small>
+        </div>
+        <div class="Disc">
+            <p>I am a Front-End Developer from the United Kingdom</p>
+            <div class="Socials">
+                <a href="https://www.linkedin.com/in/michealdownard/"><i style="color: #0A66C2;" class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/swayz8148"><i style="color: #211F1F;" class='bx bxl-github'></i></a>
+                <a href="" id="discord-link"><i style="color: #5865F2;" class='bx bxl-discord-alt'></i></a>
+                <a href="mailto:michealdownard11@gmail.com"><i style="color: #D44638;" class='bx bxl-gmail'></i></a>
+            </div>
+            <div class="container">
+                <div>
+                    <div class="Subheading">
+                        <h2>Projects</h2>
+                    </div>
+                    <ol>
+                        <li><a href="https://github.com/swayz8148/Python">Python Scripts(Stuff i do for fun)</a></li>
+                        <li><a href="https://github.com/swayz8148/Arch-Swayz">Arch Linux Install Script</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <div class="Subheading">
+                        <h2>Languages</h2>
+                    </div>
+                    <div class="Language-icons">
+                        <img src="assets/img/python.svg" alt="Python Logo" style="width: 35px; height: 35px;">
+                        <img src="assets/img/HTML5.svg" alt="HTML Logo" style="width: 35px; height: 35px;">
+                        <img src="assets/img/CSS3.svg" alt="CSS Logo" style="width: 35px; height: 35px;">
+                        <img src="assets/img/wordpress.svg" alt="wordpress Logo" style="width: 35px; height: 35px;">
+                    </div>
+                    <div>
+                        <p class="OS">Operating Systems</p>
+                        <img src="assets/img/Linux.svg" alt="Linux Logo" style="width: 35px; height: 35px;">
+                        <img src="assets/img/Windows.svg" alt="Windows Logo" style="width: 35px; height: 35px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Profile-img">
+            <img src="assets/img/profile.jpg" alt="Profile Pic">
+        </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script>
+        function copyToClipboard(text) {
+            const textField = document.createElement('textarea');
+            textField.innerText = text;
+            document.body.appendChild(textField);
+            textField.select();
+            document.execCommand('copy');
+            textField.remove();
+        }
+
+        const discordLink = document.getElementById('discord-link');
+
+        discordLink.addEventListener('click', function () {
+            const discordUsername = '.swayz.';
+            copyToClipboard(discordUsername);
+            alert('Discord username copied to clipboard!');
+        });
+    </script>
+</body>
+
 </html>
