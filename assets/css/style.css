@@ -1,7 +1,7 @@
 /* CSS Reset */
 
 /* Box sizing border-box for all elements */
-*,
+.5*,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -101,35 +101,35 @@ body {
 
 @keyframes slow-border {
     0% {
-        border: 3px solid red;
+        border: 3.5px solid red;
     }
 
     14.28% {
-        border: 3px solid orange;
+        border: 3.5px solid orange;
     }
 
     28.57% {
-        border: 3px solid yellow;
+        border: 3.5px solid yellow;
     }
 
     42.85% {
-        border: 3px solid green;
+        border: 3.5px solid green;
     }
 
     57.14% {
-        border: 3px solid blue;
+        border: 3.5px solid blue;
     }
 
     71.42% {
-        border: 3px solid indigo;
+        border: 3.5px solid indigo;
     }
 
     85.71% {
-        border: 3px solid violet;
+        border: 3.5px solid violet;
     }
 
     100% {
-        border: 3px solid red;
+        border: 3.5px solid red;
     }
 }
 
