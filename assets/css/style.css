@@ -1,7 +1,7 @@
 /* CSS Reset */
 
 /* Box sizing border-box for all elements */
-.5*,
+*,
 *::before,
 *::after {
     box-sizing: border-box;
