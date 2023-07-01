@@ -54,7 +54,7 @@ button {
 
 body {
     font-family: 'ASAP', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     background: #444;
     background: linear-gradient(to bottom, #444, #333);
@@ -69,16 +69,17 @@ body {
 }
 
 .Header {
-    margin: 25rem 0 0 20rem;
+    margin: 15rem 0 0 20rem;
+    height: 100rem;
 }
 
 .Title {
     display: flex;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .Title small {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-style: italic;
     margin: 25px 20px;
     color: #888;
@@ -86,7 +87,7 @@ body {
 
 .Profile-img {
     position: relative;
-    top: -20rem;
+    top: -25rem;
     left: 50rem;
 }
 
@@ -94,7 +95,7 @@ body {
     position: relative;
     border: none;
     border-radius: 50%;
-    height: 25rem;
+    height: 30rem;
     animation: slow-border 10s infinite linear;
 }
 
@@ -132,18 +133,13 @@ body {
     }
 }
 
-.Socials {
-    font-size: 1.5rem;
-    text-shadow: none;
-}
-
 .container {
     display: flex;
     margin-top: 1rem;
 }
 
 .Subheading {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 ol {
@@ -152,11 +148,7 @@ ol {
 }
 
 li {
-    padding: 5px 0;
-}
-
-.Language-icons i{
-    font-size: 2.5rem;
+    padding: 0.5rem 0;
 }
 
 .OS {
