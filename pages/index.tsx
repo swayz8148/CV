@@ -10,6 +10,22 @@ import ITSkills from "./api/ITSkills";
 import About from "./api/About";
 import SocialMedia from "./api/social_media";
 import Certificates from "./api/certificates";
+import Skills from "./api/Skills";
+import Reference from "./api/refrence";
+
+const skillsData = [
+  { name: "React", progress: 40 },
+  { name: "Vue.js", progress: 40 },
+  { name: "Chakra UI", progress: 40 },
+  { name: "Typescript", progress: 40 },
+  { name: "Flask", progress: 20 },
+  { name: "Next.js", progress: 70 },
+  { name: "Node.js", progress: 70 },
+  { name: "Git", progress: 50 },
+  { name: "Linux", progress: 30 },
+  { name: "Windows", progress: 80 },
+  { name: "Python", progress: 90 },
+];
 
 const Home = () => {
   return (
@@ -28,25 +44,20 @@ const Home = () => {
             name="Micheal Downard"
             email="micheal.downard@icloud.com"
             phone=""
+            location="Scotland, United Kingdom"
           />
-          <EverydaySkills skills={["Customer Service", "Trail Maintenance"]} />
-          <ITSkills
+          <EverydaySkills
             skills={[
-              "Linux",
-              "Windows",
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "Python",
-              "React",
-              "Chakra UI",
-              "Typescript",
-              "Flask",
-              "Next.js",
-              "Node.js",
-              "Git",
+              "Customer Service",
+              "Time Managment",
+              "Problem Solving",
+              "Teamwork",
+              "Communication",
+              "Adaptability",
+              "Critical Thinking",
             ]}
           />
+          <ITSkills skills={skillsData} progress={100} />
 
           <SocialMedia />
         </GridItem>
@@ -59,11 +70,7 @@ const Home = () => {
         >
           <About
             title="Personal Statement"
-            about="
-            A dedicated and dependable individual, actively pursuing full-time or temp-contract employment within the IT industry.
-            With a strong work ethic I know I can build amazing things with a team of developers.
-            I know vue.js and all the basics around it. I can also learn to react before starting if needed.
-            I have 4 years of experience building websites for my own projects."
+            about="I am a dedicated and dependable individual, actively pursuing full-time or temp-contract employment within the IT industry. With a strong work ethic, I know I can build amazing things with a team of developers. I am a quick learner and I am always looking to improve my skills. I am a very outdoors person and I love to mountain bike and explore new trails. I am also very skilled in customer service and skilled in IT, I have 4 years of experience building websites for my projects."
           />
           <WorkExperience
             company="Mountain Bike Centre"
@@ -74,23 +81,30 @@ const Home = () => {
 
           <WorkExperience
             company="GGS Bar & Restaurant"
-            role="Lotchen Porter / Kitchen Assistant"
+            role="Kitchen Porter / Kitchen Assistant"
             date="Aug 2022 - Dec 2022"
-            description=""
+            description="Wasking dishes, cleaning the kitchen and helping the chefs with food prep."
+          />
+
+          <WorkExperience
+            company="Smoking Lobster"
+            role="Apprentice Chef"
+            date="May 2023 - May 2023"
+            description="Learning how to be a chef and helping the chefs with food prep."
           />
 
           <WorkExperience
             company="Dominos Pizza"
             role="E-bike Delivery Drive"
             date="July 2024 - Dec 2023"
-            description=""
+            description="Delivering pizza on an e-bike to customers in the loacl area."
           />
 
           <WorkExperience
             company="Amazon"
             role="Warehouse Operative"
             date="Dec 2023 - March 2024"
-            description=""
+            description="Picking orders for customers or venter returns."
           />
         </GridItem>
         <GridItem
@@ -106,6 +120,8 @@ const Home = () => {
               "Coding: while being an outdoors person I am very skilled within IT. In my free time I like to code different apps for my pc to make life easier and for fun I also know how to fix issues within computers and get them back up and running faster.",
             ]}
           />
+
+          <Reference reference={["Available on request"]} />
         </GridItem>
         <GridItem
           colSpan={{ sm: 1, md: 3 }}

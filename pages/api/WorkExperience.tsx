@@ -1,5 +1,5 @@
-import React from 'react';
-import { VStack, Heading, Badge, Text } from '@chakra-ui/react';
+import React from "react";
+import { VStack, Heading, Badge, Text } from "@chakra-ui/react";
 
 interface WorkExperienceProps {
   company: string;
@@ -21,7 +21,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
       bg="gray.50"
       borderRadius="lg"
       alignItems="start"
-      spacing={3}
+      spacing={2.5}
       margin={3}
     >
       <Heading size="md">{company}</Heading>

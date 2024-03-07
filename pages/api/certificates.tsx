@@ -18,15 +18,18 @@ const Certificates: React.FC<CertificatesProps> = ({ title, img }) => {
       margin={3}
     >
       <Heading size="lg">{title}</Heading>
-      <HStack spacing={5}>
+      <HStack spacing={5} overflowX="auto" w="full">
         {img.map((image, index) => (
-          <Box key={index} boxSize="200px">
+          <Box
+            key={index}
+            w={{ base: "100px", sm: "150px", md: "200px" }}
+            h={{ base: "100px", sm: "150px", md: "200px" }}
+            overflow="hidden"
+          >
             <img
-              width={200}
-              height={200}
               src={image}
               alt={title}
-              style={{ width: "auto", height: "auto" }}
+              style={{ maxWidth: "100%", maxHeight: "100%", display: "block" }}
             />
           </Box>
         ))}
@@ -34,4 +37,5 @@ const Certificates: React.FC<CertificatesProps> = ({ title, img }) => {
     </VStack>
   );
 };
+
 export default Certificates;

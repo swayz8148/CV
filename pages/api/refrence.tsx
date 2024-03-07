@@ -1,11 +1,11 @@
 import React from "react";
 import { VStack, Heading, UnorderedList, ListItem } from "@chakra-ui/react";
 
-interface ITSkillsProps {
-  skills: string[];
+interface ReferenceProps {
+  reference: string[];
 }
 
-const ITSkills: React.FC<ITSkillsProps> = ({ skills }) => {
+const Reference: React.FC<ReferenceProps> = ({ reference }) => {
   return (
     <VStack
       padding="5"
@@ -16,14 +16,14 @@ const ITSkills: React.FC<ITSkillsProps> = ({ skills }) => {
       spacing={3}
       margin={3}
     >
-      <Heading size="lg">Skills</Heading>
+      <Heading size="lg">Reference</Heading>
       <UnorderedList styleType="none" spacing={2} padding={0} margin={0}>
-        {skills.map((skill, index) => (
-          <ListItem key={index}>{skill}</ListItem>
+        {reference.map((reference, index) => (
+          <ListItem key={index}>{reference}</ListItem>
         ))}
       </UnorderedList>
     </VStack>
   );
 };
 
-export default ITSkills;
+export default Reference;
