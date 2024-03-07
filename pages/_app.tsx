@@ -7,7 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const theme = extendTheme({
   fonts: {
-    body: "var(--Font)",
+    body: "Inter, sans-serif",
   },
 });
 
