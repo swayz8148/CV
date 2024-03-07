@@ -64,9 +64,13 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
+          name: nextjs-out
           path: ./out
+
+      - name: check out dir
+        run: ls -l out
 
   deploy:
     environment:
