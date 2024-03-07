@@ -1,6 +1,5 @@
 import React from "react";
 import { VStack, Heading, HStack, Box } from "@chakra-ui/react";
-import Image from "next/image";
 
 interface CertificatesProps {
   title: string;
@@ -22,7 +21,7 @@ const Certificates: React.FC<CertificatesProps> = ({ title, img }) => {
       <HStack spacing={5}>
         {img.map((image, index) => (
           <Box key={index} boxSize="200px">
-            <Image
+            <img
               width={200}
               height={200}
               src={image}
