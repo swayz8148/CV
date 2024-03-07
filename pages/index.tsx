@@ -56,7 +56,7 @@ const Home = () => {
               "Critical Thinking",
             ]}
           />
-          <ITSkills skills={skillsData} progress={100} />
+          <ITSkills skills={skillsData} />
 
           <SocialMedia />
         </GridItem>
