@@ -10,7 +10,6 @@ import ITSkills from "./api/ITSkills";
 import About from "./api/About";
 import SocialMedia from "./api/social_media";
 import Certificates from "./api/certificates";
-import Skills from "./api/Skills";
 import Reference from "./api/refrence";
 
 const skillsData = [
