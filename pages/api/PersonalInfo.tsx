@@ -46,7 +46,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
           alignItems="center"
         >
           <img
-            src="/img/face.jpg"
+            src="/img/face.jpeg"
             alt="face"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
