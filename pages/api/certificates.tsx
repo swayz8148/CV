@@ -1,5 +1,6 @@
 import React from "react";
-import { VStack, Heading, HStack, Box } from "@chakra-ui/react";
+import { VStack, Heading, Box, SimpleGrid } from "@chakra-ui/react";
+import Image from "next/image"; // Make sure this import is at the top
 
 interface CertificatesProps {
   title: string;
@@ -18,22 +19,26 @@ const Certificates: React.FC<CertificatesProps> = ({ title, img }) => {
       margin={3}
     >
       <Heading size="lg">{title}</Heading>
-      <HStack spacing={5} overflowX="auto" w="full">
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={5} w="full">
         {img.map((image, index) => (
           <Box
             key={index}
-            w={{ base: "100px", sm: "150px", md: "200px" }}
-            h={{ base: "100px", sm: "150px", md: "200px" }}
+            w="full"
+            h={{ base: "200px", sm: "150px", md: "200px" }}
             overflow="hidden"
+            position="relative"
+            borderRadius="lg"
+            borderColor="gray.500"
+            borderWidth="3px"
+            _hover={{
+              transform: "scale(1.1)",
+              transition: "transform 0.2s ease-in-out 0.1s",
+            }}
           >
-            <img
-              src={image}
-              alt={title}
-              style={{ maxWidth: "100%", maxHeight: "100%", display: "block" }}
-            />
+            <Image src={image} alt={title} layout="fill" objectFit="cover" />
           </Box>
         ))}
-      </HStack>
+      </SimpleGrid>
     </VStack>
   );
 };
