@@ -1,6 +1,6 @@
 import React from "react";
 import { HStack, Heading, VStack } from "@chakra-ui/react";
-import { BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
+import { BiLogoLinkedin, BiLogoGithub, LinkIcon } from "react-icons/bi";
 
 const SocialMedia: React.FC = () => {
   return (
@@ -20,6 +20,9 @@ const SocialMedia: React.FC = () => {
         </a>
         <a href="https://github.com/swayz8148" target="_blank">
           <BiLogoGithub size={24} />
+        </a>
+        <a href="https://michealdev.com">
+          <LinkIcon size={24}/>
         </a>
       </HStack>
     </VStack>

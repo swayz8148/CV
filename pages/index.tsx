@@ -148,7 +148,6 @@ const Home = () => {
               "https://api2.sololearn.com/v2/certificates/CC-HJMY5G9E/image/jpg",
               "https://api2.sololearn.com/v2/certificates/CT-MJ9NNGEQ/image/jpg",
               "https://api2.sololearn.com/v2/certificates/CT-RLTB9BER/image/jpg",
-              "https://media.licdn.com/dms/image/D4E22AQF88MmGemJvAg/feedshare-shrink_1280/0/1688428183844?e=1712793600&v=beta&t=3ChH7BhLLEMXagTVKQk_GujUmKboC98zb3jQcUbSIL4",
             ]}
           />
         </GridItem>
