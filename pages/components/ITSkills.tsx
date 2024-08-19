@@ -9,7 +9,6 @@ import {
 
 interface Skill {
   name: string;
-  progress: number;
 }
 
 interface EverydaySkillsProps {
@@ -34,19 +33,6 @@ const ITSkills: React.FC<EverydaySkillsProps> = ({ skills }) => {
             <Heading size="sm" mb={1}>
               {skill.name}
             </Heading>
-            <Progress
-              value={skill.progress}
-              colorScheme="green"
-              size="sm"
-              rounded="full"
-              sx={{
-                backgroundColor: "gray.200", // Custom track color
-                "> div": {
-                  backgroundColor: "green.300", // Custom filled bar color
-                },
-                boxShadow: "sm", // Adding a slight shadow for depth
-              }}
-            />
           </ListItem>
         ))}
       </UnorderedList>

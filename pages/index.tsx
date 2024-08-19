@@ -1,54 +1,53 @@
 import { GridItem, Grid, Container } from "@chakra-ui/react";
 import React from "react";
 
-import PersonalInfo from "./api/PersonalInfo";
-import Education from "./api/Education";
-import WorkExperience from "./api/WorkExperience";
-import Hobbies from "./api/Hobbies";
-import EverydaySkills from "./api/EverydaySkills";
-import ITSkills from "./api/ITSkills";
-import About from "./api/About";
-import SocialMedia from "./api/social_media";
-import Certificates from "./api/certificates";
-import Reference from "./api/refrence";
+import PersonalInfo from "./components/PersonalInfo";
+import Education from "./components/Education";
+import WorkExperience from "./components/WorkExperience";
+import Hobbies from "./components/Hobbies";
+import EverydaySkills from "./components/EverydaySkills";
+import ITSkills from "./components/ITSkills";
+import About from "./components/About";
+import SocialMedia from "./components/social_media";
+import Certificates from "./components/certificates";
+import Reference from "./components/refrence";
 
 const skillsData = [
-  { name: "React", progress: 40 },
-  { name: "Vue.js", progress: 40 },
-  { name: "Chakra UI", progress: 40 },
-  { name: "Typescript", progress: 40 },
-  { name: "Flask", progress: 20 },
-  { name: "Next.js", progress: 70 },
-  { name: "Node.js", progress: 70 },
-  { name: "Git", progress: 50 },
-  { name: "Linux", progress: 30 },
-  { name: "Windows", progress: 80 },
-  { name: "Python", progress: 90 },
+  { name: "JavaScript"},
+  { name: "TypeScript"},
+  { name: "React"},
+  { name: "Python"},
+  { name: "Rust"},
+  { name: "Ruby"},
+  { name: "Vue"},
+  { name: "Linux"},
+  { name: "Windows"},
+  { name: "MacOS"}
 ];
 
 const Home = () => {
   return (
     <Container maxW="container.xl" p={5}>
       <Grid
-        templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(5, 1fr)" }}
+        templateColumns={{ base: "1fr", md: "repeat(6, 1fr)" }}
         gap={6}
       >
         <GridItem
-          colSpan={{ sm: 1, md: 2 }}
+          colSpan={{ base: 6, md: 2 }}
           p={5}
           bg="gray.700"
           borderRadius="lg"
         >
           <PersonalInfo
             name="Micheal Downard"
-            email="micheal.downard@icloud.com"
+            email="contact@michealdev.com"
             phone=""
             location="Scotland, United Kingdom"
           />
           <EverydaySkills
             skills={[
               "Customer Service",
-              "Time Managment",
+              "Time Management",
               "Problem Solving",
               "Teamwork",
               "Communication",
@@ -57,12 +56,11 @@ const Home = () => {
             ]}
           />
           <ITSkills skills={skillsData} />
-
           <SocialMedia />
         </GridItem>
 
         <GridItem
-          colSpan={{ sm: 1, md: 3 }}
+          colSpan={{ base: 6, md: 4 }}
           bg="gray.700"
           p={5}
           borderRadius="lg"
@@ -77,57 +75,59 @@ const Home = () => {
             date="Sep 2022 - Sep 2022"
             description="Provided customer service and trail maintenance at a local mountain bike centre."
           />
-
           <WorkExperience
             company="GGS Bar & Restaurant"
             role="Kitchen Porter / Kitchen Assistant"
             date="Aug 2022 - Dec 2022"
-            description="Wasking dishes, cleaning the kitchen and helping the chefs with food prep."
+            description="Washing dishes, cleaning the kitchen and helping the chefs with food prep."
           />
-
           <WorkExperience
             company="Smoking Lobster"
             role="Apprentice Chef"
             date="May 2023 - May 2023"
             description="Learning how to be a chef and helping the chefs with food prep."
           />
-
           <WorkExperience
             company="Dominos Pizza"
-            role="E-bike Delivery Drive"
+            role="E-bike Delivery Driver"
             date="July 2024 - Dec 2023"
-            description="Delivering pizza on an e-bike to customers in the loacl area."
+            description="Delivering pizza on an e-bike to customers in the local area."
           />
-
           <WorkExperience
             company="Amazon"
             role="Warehouse Operative"
             date="Dec 2023 - March 2024"
-            description="Picking orders for customers or venter returns."
+            description="Picking orders for customers or vendor returns."
           />
         </GridItem>
+
         <GridItem
-          colSpan={{ sm: 1, md: 2 }}
+          colSpan={{ base: 6, md: 2 }}
           bg="gray.700"
           p={5}
           borderRadius="lg"
         >
           <Hobbies
             hobbies={[
-              "Mountain Biking: Skilled in navigating challenging terrains, demonstrating endurance and technical prowess while enjoying the thrill of off-read cycling ",
-              "Outdoor Pursuits: In addition to being skilled in mountain biking and navigating challenging terrains with endurance and technical prowess, I also possess strong navigational abilities using maps. Whether it's exploring new hiking trails, planning outdoor adventures, or orienteering in unfamiliar territories, I have a knack for reading and interpreting maps to find my way confidently. This skill enables me to navigate through diverse outdoor environments, ensuring a safe and fulfilling experience while embracing the wonders of nature. ",
-              "Coding: while being an outdoors person I am very skilled within IT. In my free time I like to code different apps for my pc to make life easier and for fun I also know how to fix issues within computers and get them back up and running faster.",
+              "Mountain Biking: Skilled in navigating challenging terrains, demonstrating endurance and technical prowess while enjoying the thrill of off-road cycling.",
+              "Outdoor Pursuits: Skilled in navigating challenging terrains with endurance and technical prowess. Strong navigational abilities using maps for exploring new hiking trails and planning outdoor adventures.",
+              "Coding: Skilled in IT, enjoy coding apps to make life easier and for fun. Capable of fixing issues within computers and getting them back up and running faster.",
             ]}
           />
-
           <Reference reference={["Available on request"]} />
         </GridItem>
+
         <GridItem
-          colSpan={{ sm: 1, md: 3 }}
+          colSpan={{ base: 6, md: 4 }}
           bg="gray.700"
           p={5}
           borderRadius="lg"
         >
+          <Education
+            school="Carisbrooke College"
+            degree={["GCSE English 3", "GCSE Maths 1"]}
+            date="2014 - 2021"
+          />
           <Education
             school="HTP Apprenticeship College"
             degree={[
@@ -137,18 +137,9 @@ const Home = () => {
             date="2021 - 2023"
           />
           <Education
-            school="Carisbrooke College"
-            degree={["GCSE English 3", "GCSE Maths 1"]}
-            date="2014 - 2021"
-          />
-
-          <Certificates
-            title="Certificates"
-            img={[
-              "https://api2.sololearn.com/v2/certificates/CC-HJMY5G9E/image/jpg",
-              "https://api2.sololearn.com/v2/certificates/CT-MJ9NNGEQ/image/jpg",
-              "https://api2.sololearn.com/v2/certificates/CT-RLTB9BER/image/jpg",
-            ]}
+            school="Fife College"
+            degree={["Computing with Software Development and Cyber Security SCQF Level 5"]}
+            date="2024 - 2025"
           />
         </GridItem>
       </Grid>
